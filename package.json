@@ -1,6 +1,6 @@
 {
   "name": "justinlivi-community",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript port of original community java applet.",
   "main": "src/index.js",
   "scripts": {
