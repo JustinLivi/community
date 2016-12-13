@@ -9,6 +9,7 @@ module.exports = function createSketch( canvas ) {
     const fps = 60;
     const fpsInterval = 1000 / fps;
 
+    let stopped = false;
     let frames = 0;
     let now;
     let elapsed;
@@ -35,7 +36,7 @@ module.exports = function createSketch( canvas ) {
     function line( x1, y1, x2, y2 ) {
         ctx.beginPath();
         for ( let count = 0; count < 20; count++ ) {
-            ctx.rect( x1 + count * ( x2 - x1 ) / 20, y1 + count * ( y2 - y1 ) / 20, 1, 1 );
+            ctx.rect( x1 + count * ( x2 - x1 ) / 20, y1 + count * ( y2 - y1 ) / 20, 2, 2 );
         }
         ctx.fill();
     }
@@ -137,12 +138,13 @@ module.exports = function createSketch( canvas ) {
         for ( let count = 0; count < nodecount; count++ ) {
             optimizeFarthest( count );
             optimizeClosest( count );
-            ctx.rect( nodes[count].loc.x, nodes[count].loc.y, 3, 3 );
+            ctx.rect( nodes[count].loc.x, nodes[count].loc.y, 6, 6 );
             ctx.fill();
         }
     }
 
     function animate() {
+        if ( stopped ) return;
         raf( animate );
         if ( frames > 500 ) return;
         frames++;
@@ -162,4 +164,10 @@ module.exports = function createSketch( canvas ) {
 
     reset();
     animate();
+
+    return {
+        stop: function stop() {
+            stopped = true;
+        },
+    };
 };
