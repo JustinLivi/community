@@ -1,0 +1,10 @@
+{
+  "extends": ["tslint-react", "tslint-config-airbnb", "tslint-config-prettier"],
+  "rules": {
+    "jsx-boolean-value": [true, "never"],
+    "no-submodule-imports": [false],
+    "interface-name": [true, "never-prefix"],
+    "import-name": [false],
+    "variable-name": [false]
+  }
+}
