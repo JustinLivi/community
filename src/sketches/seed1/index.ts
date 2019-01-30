@@ -18,15 +18,14 @@ export class Community implements Sketch {
     this.width = canvas.width;
     this.height = canvas.height;
     this.draw = this.draw.bind(this);
-    this.nodecount = 100;
+    this.nodecount = 80;
     this.resetNodes();
-    this.animator = new Animator({ draw: this.draw, maxFrames: 500 });
+    this.animator = new Animator({ draw: this.draw });
     this.animator.start();
   }
 
   public reset() {
     this.resetNodes();
-    this.artBox.clear();
     this.animator.reset();
     this.animator.start();
   }
