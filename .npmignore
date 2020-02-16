@@ -1,3 +1,6 @@
-*
-!build
-!types
+public
+src
+.eslintrc.js
+.prettierrc.js
+custom.d.ts
+tsconfig.json
