@@ -1,7 +1,6 @@
 {
   "name": "community-react",
   "version": "0.1.0",
-  "private": true,
   "main": "build/exports.js",
   "devDependencies": {
     "@types/jest": "^23.3.14",
