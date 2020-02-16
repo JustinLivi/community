@@ -7,17 +7,17 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "UMD",
+    "module": "esnext",
     "moduleResolution": "node",
-    "resolveJsonModule": false,
+    "resolveJsonModule": true,
     "isolatedModules": true,
     "outDir": "build",
     "lib": ["es2015", "dom"],
     "declaration": true,
-    "declarationMap": true,
-    "jsx": "react"
+    "jsx": "react",
+    "noEmit": true
   },
   "include": ["src"],
-  "exclude": ["src/App.tsx", "src/index.tsx", "**/*.test.*"],
+  "exclude": ["src/App.tsx", "src/demo.tsx", "**/*.test.*"],
   "files": ["custom.d.ts"]
 }
