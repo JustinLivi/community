@@ -2,6 +2,7 @@
   "name": "community-react",
   "version": "0.1.0",
   "main": "build/exports.js",
+  "types": "types",
   "devDependencies": {
     "@types/jest": "^23.3.14",
     "eslint-config-airbnb": "^18.0.1",
@@ -29,8 +30,9 @@
     "react-scripts": "^3.4.0"
   },
   "scripts": {
+    "prepublish": "npm run build",
     "start": "react-scripts start",
-    "build": "rm -rf build && tsc",
+    "build": "rm -rf build && rm -rf types && tsc",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
