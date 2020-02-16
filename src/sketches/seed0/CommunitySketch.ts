@@ -4,7 +4,7 @@ import { dist } from '../../lib/math';
 import { Sketch } from '../../lib/SketchPad';
 import { CNode } from './CNode';
 
-export class Community implements Sketch {
+export class CommunitySketch implements Sketch {
   private readonly animator: Animator;
   private readonly artBox: ArtBox;
   private readonly width: number;
@@ -42,13 +42,13 @@ export class Community implements Sketch {
     let farthestDistance = 0;
     const {
       loc: { x: x1, y: y1 },
-      optimal
+      optimal,
     } = targetNode;
     for (let count = 0; count < this.nodecount; count += 1) {
       const comparator = this.nodes[count];
       if (!comparator) continue;
       const {
-        loc: { x: x2, y: y2 }
+        loc: { x: x2, y: y2 },
       } = comparator;
       const distance = Math.abs(dist(x1, y1, x2, y2) - optimal);
       if (count !== nodeId && distance > farthestDistance) {
@@ -64,19 +64,16 @@ export class Community implements Sketch {
     let closestDistance;
     const {
       loc: { x: x1, y: y1 },
-      optimal
+      optimal,
     } = targetNode;
     for (let count = 0; count < this.nodecount; count += 1) {
       const comparator = this.nodes[count];
       if (!comparator) continue;
       const {
-        loc: { x: x2, y: y2 }
+        loc: { x: x2, y: y2 },
       } = comparator;
       const distance = Math.abs(dist(x1, y1, x2, y2) - optimal);
-      if (
-        count !== nodeId &&
-        (closestDistance === undefined || distance < closestDistance)
-      ) {
+      if (count !== nodeId && (closestDistance === undefined || distance < closestDistance)) {
         closest = comparator;
         closestDistance = distance;
       }
@@ -90,10 +87,10 @@ export class Community implements Sketch {
       loc: { x: x1, y: y1 },
       speed,
       grey,
-      alpha
+      alpha,
     } = targetNode;
     const {
-      loc: { x: x2, y: y2 }
+      loc: { x: x2, y: y2 },
     } = comparator;
     const distance = dist(x1, y1, x2, y2);
     const adjustedDistance = distance / speed;
@@ -123,7 +120,7 @@ export class Community implements Sketch {
         this.optimizeDistance(targetNode, closest);
       }
       const {
-        loc: { x, y }
+        loc: { x, y },
       } = targetNode;
       this.artBox.rect(x, y, 6, 6);
       this.artBox.fill();

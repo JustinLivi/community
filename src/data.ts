@@ -6,12 +6,5 @@ export const data = {
     owner: 'justinlivi',
     repo: 'community',
     ref: 'master',
-    embed: [
-      {
-        type: 'js',
-        label: 'render.js',
-        path: 'src/render.js'
-      }
-    ]
-  }
+  },
 };

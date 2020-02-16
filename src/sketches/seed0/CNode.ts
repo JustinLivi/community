@@ -19,11 +19,11 @@ export class CNode {
     this.theta = random(360);
     this.loc = {
       x: random(width),
-      y: random(height)
+      y: random(height),
     };
     this.vel = {
       x: 0,
-      y: 0
+      y: 0,
     };
     this.grey = random(255);
     this.alpha = random(10, 70) / 255;
