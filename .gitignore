@@ -11,8 +11,7 @@ pids
 .DS_Store
 
 # Compiled files
-build
-types
+dist
 
 # Dependency directories
 node_modules

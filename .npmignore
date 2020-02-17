@@ -4,3 +4,4 @@ src
 .prettierrc.js
 custom.d.ts
 tsconfig.json
+rollup.config.ts
