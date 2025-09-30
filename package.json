@@ -26,9 +26,9 @@
     "typescript": "^3.7.5"
   },
   "dependencies": {
-    "@types/lodash": "^4.14.149",
+    "@types/lodash": "^4.17.20",
     "@types/raf": "^3.4.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "raf": "^3.4.1"
   },
   "peerDependencies": {
